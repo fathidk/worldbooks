@@ -1,6 +1,0 @@
-npm i gulp-concat gulp-sass gulp-autoprefixer gulp-pug 
-      gulp-livereload gulp-notify gulp-sourcemaps gulp-minify --save-dev
-
-
-
-https://flatuicolors.com/palette/de : colors

@@ -1,0 +1,64 @@
+@font-face
+{
+    font-family:'Noto Naskh Arabic';
+    font-style:normal;
+    font-weight:400;
+    src:url(../fonts/NotoNaskhArabic-Regular.eot);
+    src:url(../fonts/NotoNaskhArabic-Regular.eot?#iefix) format('embedded-opentype'),
+    url(../fonts/NotoNaskhArabic-Regular.woff2) format('woff2'),
+    url(../fonts/NotoNaskhArabic-Regular.woff) format('woff'),
+    url(../fonts/NotoNaskhArabic-Regular.ttf) format('truetype')
+}
+@font-face{
+    font-family:'Noto Naskh Arabic';
+    font-style:normal;
+    font-weight:700;
+    src:url(../fonts/NotoNaskhArabic-Bold.eot);
+    src:url(../fonts/NotoNaskhArabic-Bold.eot?#iefix) format('embedded-opentype'),
+    url(../fonts/NotoNaskhArabic-Bold.woff2) format('woff2'),
+    url(../fonts/NotoNaskhArabic-Bold.woff) format('woff'),
+    url(../fonts/NotoNaskhArabic-Bold.ttf) format('truetype')
+}
+@font-face{
+    font-family:'Noto Kufi Arabic';
+    font-style:normal;
+    font-weight:400;
+    src:url(../fonts/NotoKufiArabic-Regular.eot);
+    src:url(../fonts/NotoKufiArabic-Regular.eot?#iefix) format('embedded-opentype'),
+    url(../fonts/NotoKufiArabic-Regular.woff2) format('woff2'),
+    url(../fonts/NotoKufiArabic-Regular.woff) format('woff'),
+    url(../fonts/NotoKufiArabic-Regular.ttf) format('truetype')
+}
+@font-face{
+    font-family:'Noto Kufi Arabic';
+    font-style:normal;
+    font-weight:700;
+    src:url(../fonts/NotoKufiArabic-Bold.eot);
+    src:url(../fonts/NotoKufiArabic-Bold.eot?#iefix) format('embedded-opentype'),
+    url(../fonts/NotoKufiArabic-Bold.woff2) format('woff2'),
+    url(../fonts/NotoKufiArabic-Bold.woff) format('woff'),
+    url(../fonts/NotoKufiArabic-Bold.ttf) format('truetype')}
+
+
+@font-face{
+    font-family: kufiArRegular;
+    src:url("../fonts/DroidKufi-Regular.ttf")
+}
+@font-face{
+    font-family: kufiArBold;
+    src:url("../fonts/DroidKufi-Bold.ttf")
+}
+
+html{
+    direction: rtl;
+    text-align: right;
+    body{
+        direction: rtl;
+        text-align: right;
+        font-family: Noto Naskh Arabic;
+
+        h1, h2, h3, h4, h5, h6, nav {
+            font-family: 'Noto Kufi Arabic','Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+        }
+    }
+}

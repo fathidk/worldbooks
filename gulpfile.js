@@ -16,8 +16,9 @@ gulp.task('html',function () {
     .pipe(livereload())
 });
 
-gulp.task('css',function () {
-    return gulp.src(["dev/css/**/*.css","dev/css/**/*.sass"])
+gulp.task('css',function () {  // seperate task for rtl_style.css
+
+    return gulp.src(["dev/css/**/*.css","dev/css/**/*.scss",'!dev/libs/*.css',"!dev/css/sass/helper/rtl_styles.scss"])
     .pipe(sourcemaps.init())
     .pipe(sass({outputStyle : "compressed"}).on("error",sass.logError))
     .pipe(autoprefixer())
@@ -26,6 +27,19 @@ gulp.task('css',function () {
     .pipe(gulp.dest('dist/css'))
     .pipe(livereload())
 });
+
+
+gulp.task('rtl_css',function () {
+    return gulp.src("dev/css/sass/helper/rtl_styles.scss")
+    .pipe(sourcemaps.init())
+    .pipe(sass({outputStyle : "compressed"}).on("error",sass.logError))
+    .pipe(autoprefixer())
+    .pipe(concat('rtl_styles.css'))
+    .pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest('dist/css'))
+    .pipe(livereload())
+});
+
 
 gulp.task('js',function () {
     return gulp.src("dev/js/*.js")
@@ -41,8 +55,9 @@ gulp.task('watch',function () {
     livereload.listen();
     gulp.watch("dev/html/**/*.pug",["html"]);
     gulp.watch("dev/js/**/*.js",["js"]);
-    gulp.watch(["dev/css/**/*.css","dev/css/**/*.sass"],["css"]);
-    
+    gulp.watch(["dev/css/**/*.css","dev/css/**/*.scss"],["css"]);
+    gulp.watch("dev/css/sass/helper/rtl_styles.scss",["rtl_css"]);
+
 });
 
 

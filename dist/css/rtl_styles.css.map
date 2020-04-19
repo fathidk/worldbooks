@@ -1,0 +1,1 @@
+{"version":3,"sources":["rtl_styles.scss"],"names":[],"mappings":"AAAA,wBAEQ,UAAW,CACX,gBAAiB,CACjB,iBAAkB","file":"rtl_styles.css","sourcesContent":[".navbar {\r\n    .navbar-toggler{\r\n        float: left;\r\n        margin-left: 15px;\r\n        margin-right: auto;\r\n    }\r\n}"]}

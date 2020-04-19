@@ -1,0 +1,102 @@
+.header_logo{
+    border-top: 3px solid $mainColor;
+    width: 100%;
+    background: #fff;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    img{
+        height: 120px;
+    }
+}
+
+.navbar {
+    padding: 0;
+    min-height: 52px;
+    border-radius: 0;
+    border: 1px;
+    box-shadow: rgba(0,0,0,.04) 0 3px 6px;
+    background: #fff;
+    border-top: 1px solid #e8e8e8;
+    border-bottom: 2px solid #e8e8e8;
+    
+    .a_navbar_logo {
+        padding: 5px 13px;
+        padding-right: 0;
+        margin-right: 0;
+        @media screen and (max-width: 600px) {
+            padding-right: 13px;
+          }
+    }
+    .navbar-brand img{
+        width: 40px;
+    }
+    .navbar-nav{
+        padding-right: 0;
+        li.nav-item{
+            margin-right: 0 !important;
+            a.nav-link{
+                color: #333;
+                font-weight: 500;
+                z-index: 1001;
+                padding-left: 15px!important;
+                padding-right: 15px!important;
+                margin-right: 0;
+                margin-left: 0;
+                font-size: 17px;
+                padding-top: 16px;
+                padding-bottom: 16px;  
+                line-height: 20px;
+                &.search-a{
+                    color: #37aa94;
+                    i {
+                        margin-left: 9px;
+                    }
+                    @media screen and (max-width: 990px) and (min-width : 766px) {
+                        display: none;
+                      }
+
+                }
+            }
+            &.active{
+                a.nav-link{
+                    background: #e7e7e7;
+                }
+                
+            }
+
+        }
+    }
+    .header_login_actions{
+        left: 0;
+        .btn{
+            font-size: 15px;
+        }
+        .login-btn {
+            color: #45b09e!important;
+            border: 1px solid #45b09e!important;
+            font-size: 15px;
+            background: #fff;
+            margin-left: 8px;
+            &:hover{
+                background-color: #45b09e;
+                color: white !important;
+            }
+        }
+        .register-btn{
+            color: #fff;
+            border: 1px solid #45b09e;
+            background: #45b09e;
+        } 
+        @media screen and (max-width : 766px) {
+            width: 100%;
+            text-align: left;
+            display: block;
+            margin-bottom: 20px;
+            padding-left: 9px;
+            position: static !important;
+        }
+
+    }
+
+}
+
