@@ -72,21 +72,10 @@
             font-size: 15px;
         }
         .login-btn {
-            color: #45b09e!important;
-            border: 1px solid #45b09e!important;
             font-size: 15px;
-            background: #fff;
             margin-left: 8px;
-            &:hover{
-                background-color: #45b09e;
-                color: white !important;
-            }
+            margin-left: 8px;
         }
-        .register-btn{
-            color: #fff;
-            border: 1px solid #45b09e;
-            background: #45b09e;
-        } 
         @media screen and (max-width : 766px) {
             width: 100%;
             text-align: left;
@@ -95,8 +84,54 @@
             padding-left: 9px;
             position: static !important;
         }
+        &.is_logged_in img{
+            width: 26px;
+            height: 26px;
+            border: 1px solid #fff;
+            border-radius: 50%;
+            top: 7px;
+            margin-left: 3px;
+        }
 
+        .user_actions_list{
+            padding: 0;
+            left: 2px;
+            right: inherit;
+            //display: block !important;
+            li{
+                &:hover {
+                    background-color:#45b09e;
+                    transition: all .3s ease-in-out;
+                }
+                a{
+                    padding: 10px 10px 10px 10px!important;
+                    font-size: 15px;
+                    color: black;
+                    display: block;
+                    &:hover{
+                        text-decoration: none;
+                        color: white;
+                    }
+                }
+            }
+            .dropdown-divider{
+                margin:0;
+            }
+        }
+        .btn_user_notification{
+            padding: 3px 12px;
+            font-size: 21px;
+        }    
     }
 
 }
 
+
+.modal-footer {
+    display: block;
+    border: none;
+    padding-top: 0;
+}
+.modal-header{
+    border: none;
+}

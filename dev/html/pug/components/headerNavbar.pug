@@ -1,3 +1,4 @@
+-var login = false;
 nav(class="navbar navbar-default navbar-expand-md navbar-light",data-spy="affix" data-offset-top="183")
     .container
         a(href="/",class="a_navbar_logo navbar-brand")
@@ -10,17 +11,51 @@ nav(class="navbar navbar-default navbar-expand-md navbar-light",data-spy="affix"
                 li.nav-item.active 
                     a(href="/" class="nav-link") الرئيسية
                 li.nav-item
-                    a(href="/أقسام-الكتب"  class="nav-link") أقسام الكتب
+                    a(href="file:///F:/bookwebsite/dist/categoriespage.html"  class="nav-link") أقسام الكتب
                 li.nav-item 
                     a(href="/مؤلفون-الكتب"  class="nav-link") مؤلفون الكتب  
                 li.nav-item.search-li
-                    a(class="search-a  nav-link" href="#" data-toggle="modal" id="loginModalid" data-target="#seachModal")
+                    a(class="search-a  nav-link" href="#" data-toggle="modal" id="loginModalid" data-target="#search_modal")
                        i.fa.fa-search
                        span البحث عن كتاب 
-            span.header_login_actions.position-absolute
-                a(class="btn btn-default navbar-btn login-btn" href="/login")
-                    span.fa.fa-sign-in
-                    |&nbsp;&nbsp;دخول
-                a(class="btn btn-default navbar-btn  hidden-xs register-btn" href="/register")
-                    span.fa.fa-user
-                    |&nbsp;&nbsp;إنشاء حساب
+            if !login           
+                div.header_login_actions.position-absolute
+                    a(class="btn btn-default navbar-btn login-btn uncolred_btn" href="/login")
+                        span.fa.fa-sign-in
+                        |&nbsp;&nbsp;دخول
+                    a(class="btn btn-default navbar-btn  hidden-xs register-btn colored_btn" href="/register")
+                        span.fa.fa-user
+                        |&nbsp;&nbsp;إنشاء حساب
+            else
+                div.header_login_actions.position-absolute.is_logged_in
+                    a(href="/notifications" class="btn_user_notification btn btn-default uncolred_btn")
+                        i.fa.fa-bell-o
+                    .dropdown.d-inline-block
+                        button(class="btn btn-default navbar-btn colored_btn dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="true")
+                            img(src="https://www.nourbook.com/publice/images/male.svg", alt="profile image")
+                            span حسابي
+                        ul.dropdown-menu.user_actions_list
+                            li
+                                a(href="#")
+                                    span.fa.fa-user 
+                                    |&nbsp;صفحتي
+                            li.dropdown-divider
+                            li
+                                a(href="#")
+                                    span.fa.fa-book
+                                    |&nbsp;نشر كتاب
+                            li.dropdown-divider
+                            li
+                                a(href="#")
+                                    span.fa.fa-folder-open 
+                                    |&nbsp;مكتبتي
+                            li.dropdown-divider
+                            li
+                                a(href="#")
+                                    span.fa.fa-cog 
+                                    |&nbsp;الإعدادات
+                            li.dropdown-divider
+                            li
+                                a(href="#")
+                                    span.fa.fa-power-off 
+                                    |&nbsp;تسجيل خروج

@@ -1,0 +1,133 @@
+-var pageTitle = "تحميل كتاب نظرية الفستق pdf";
+<!DOCTYPE html>
+html(lang="ar",dir="rtl")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        include pug/layouts/styles.pug
+        title #{pageTitle}
+    body
+
+        include pug/components/headerLogo
+        include pug/components/headerNavbar
+        include pug/components/headerSearch
+        .page.homepage
+            .content-area.container
+                h1.page_title.line_buttom #{pageTitle}
+                .row
+                    .col-12
+                        include pug/components/breadCrumb
+                    .col-md-12.col-lg-9
+                        .book_info.book_page_container.pad_0
+                            .pad_30
+                                .media.row 
+                                    .media-left.col-12.col-sm-4.text-center
+                                        .book_details_img_parent_container
+                                            .book_details_img_child_container
+                                                img(onclick="scroll_to_book_download();" title="الأب الغني والأب الفقير" alt="الأب الغني والأب الفقير" src="https://www.nourbook.com/publice/covers_cache/9/a/a/350_3e671629cf9aa8d6d65da9085089bb3a.jpg" onerror="this.src='https://www.nourbook.com/publice/images/default-cover2.png'" class="media-object")
+                                    .media-body.col-12.col-sm-8
+                                        h2(onclick="scroll_to_book_download();" class="book_details_title media-heading font_s_20") الأب الغني والأب الفقير
+                                        div(onclick="scroll_to_book_rating();" class="book_rating marg_b_5 font_Kuf d-inline-block") 
+                                            .stars_rating 
+                                                .empty_stars
+                                                div(class="full_stars" style="width:84.348%;right: 0;")
+                                            span.rating_num  ( 46 تقييمات ) 
+                                        .font_s_20.font_Naskh 
+                                            table.book_details_info
+                                                tbody 
+                                                    tr 
+                                                        td 
+                                                            span المؤلف
+                                                                span.pull-left : 
+                                                        td 
+                                                            a(href="/كتب-روبرت-كيوساكي-pdf")
+                                                                span#book-writer روبرت كيوساكي
+                                                    tr 
+                                                        td
+                                                            span القسم
+                                                                span.pull-left :
+                                                        td  
+                                                            a(href="/كتب-التنمية-البشرية-وتطوير-الذات-pdf")
+                                                                span#book-category التنمية البشرية وتطوير الذات
+                                                    tr 
+                                                        td
+                                                            span اللغة
+                                                                span.pull-left : 
+                                                        td
+                                                            span#book-category العربية
+                                                    tr
+                                                        td 
+                                                            span الصفحات 
+                                                                span.pull-left : 
+                                                        td 244 
+                                                    tr
+                                                        td
+                                                            span عدد الملفات
+                                                                span.pull-left :
+                                                        td  1 
+                                                    tr
+                                                        td
+                                                            span حجم الملفات
+                                                                span.pull-left :
+                                                        td  7.63 ميجا بايت 
+                                                    tr
+                                                        td
+                                                            span نوع الملفات
+                                                                span.pull-left :
+                                                        td  PDF 
+                                                    tr
+                                                        td
+                                                            span تاريخ انشاء الملفات
+                                                                span.pull-left :
+                                                        td  05  يوليو  2011 
+                                                    tr
+                                                        td(colspan="2")
+                                                            a(type="button" href="#" data-toggle="modal" data-target="#meta_data") المزيد من المعلومات الوصفية عن ملفات الكتاب
+                                        div.marg_top_20.book_options
+                                            .row
+                                                .col-12.col-sm-6.col-md-3
+                                                    button(data-toggle="modal" data-target="#rateStarModal" type="button" class="btn btn-default uncolred_btn col-3")
+                                                        i.fa.fa-star 
+                                                        | قيِّم
+                                                .col-12.col-sm-6.col-md-3
+                                                    button(data-toggle="modal" data-target="#rateStarModal" type="button" class="btn btn-default uncolred_btn col-3")
+                                                        i.fa.fa-pencil-square-o
+                                                        | مراجعة
+                                                .col-12.col-sm-6.col-md-3
+                                                    button(type="button" class="btn btn-default uncolred_btn add_quote_btn col-3")
+                                                        i.fa.fa-quote-right
+                                                        | اقتبس
+                                                .col-12.col-sm-6.col-md-3
+                                                    button(onclick="scroll_to_book_download();" type="button" class="btn btn-default uncolred_btn col-3")
+                                                        i.fa.fa-download
+                                                        | تحميل
+                            .book_bottom_tabs
+                                .row.m-0 
+                                    .col-12.col-md-4
+                                        span(class="book_deatils_reviews" onclick="scroll_to_book_rating();") 
+                                            i.fa.fa-chevron-down
+                                            | مراجعات ( 21 ) 
+                                    .col-12.col-md-4 
+                                        span(class="book_deatils_reviews" onclick="scroll_to_book_quots();")
+                                            i.fa.fa-chevron-down
+                                            | اقتباسات ( 6 ) 
+                                    .col-12.col-md-4
+                                        span(class="download_count" onclick="scroll_to_book_download();") مرات تحميل  
+                                            span(class="book_score" style="font-weight: 700;color: #000000;") (189,199)
+                            span.my_fav.font_Naskh
+                                span(data-toggle="tooltip" data-placement="right" title="" class="my_fav_icon" data-original-title="أحفظ فى مكتبتي")
+                                    i(style="color: #e74c3c;" class="fa fa-heart-o")
+                                span.my_fav_bubble أحفظ في مكتبتي
+                        .book_description_and_more.book_page_container
+                         
+
+                    .col-md-12.col-lg-3
+                        - var sidebar_title = " أقسام الكتب";
+                        - var link = "الروايات والقصص الأدبية";
+                        include pug/components/sidebar
+                        - var sidebar_title = " مؤلفون الكتب";
+                        - var link = "مصطفى محمود";
+                        include pug/components/sidebar
+            
+        include pug/layouts/scripts.pug

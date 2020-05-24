@@ -11,14 +11,15 @@ html(lang="ar",dir="rtl")
 
       include pug/components/headerLogo
       include pug/components/headerNavbar
-      .page.homepage
-         include pug/components/headerSearch
+      .page.homepage  
          .content-area.container
+            h1.page_title.line_buttom المؤلفون
+                span.categories_count ( 25,320 مؤلفا )
             .row
               .col-md-9
                 .row.books_section
-                  - for (var i=0; i<20; i++)
-                      include pug/components/book 
+                  - for (var i=0; i<40; i++)
+                      include pug/components/author 
                     
               .col-md-3
                 - var sidebar_title = " أقسام الكتب";

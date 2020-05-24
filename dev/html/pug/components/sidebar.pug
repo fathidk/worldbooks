@@ -1,1 +1,11 @@
-.sidebar أقسام الكتب
+.sidebar
+    h3(class="sidebar_header")
+        a(href="#" class="sidebar_books_categories line_buttom") #{sidebar_title}
+        span(class="pull-left" style="display: inline-block;cursor: pointer;")
+            span(data-toggle="modal"  data-target="#search_modal" title="أبحث عن قسم")
+                i(class="fa fa-search")
+    .sidebar_links
+        - for (var i=0; i<20; i++)
+            a(href="#")
+                i.fa.fa-book
+                | #{link}

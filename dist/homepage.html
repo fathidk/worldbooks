@@ -22,22 +22,305 @@
         <div class="collapse navbar-collapse position-relative" id="myNavbar">
           <ul class="navbar-nav">
             <li class="nav-item active"> <a class="nav-link" href="/">الرئيسية</a></li>
-            <li class="nav-item"><a class="nav-link" href="/أقسام-الكتب">أقسام الكتب</a></li>
+            <li class="nav-item"><a class="nav-link" href="file:///F:/bookwebsite/dist/categoriespage.html">أقسام الكتب</a></li>
             <li class="nav-item"> <a class="nav-link" href="/مؤلفون-الكتب">مؤلفون الكتب  </a></li>
-            <li class="nav-item search-li"><a class="search-a  nav-link" href="#" data-toggle="modal" id="loginModalid" data-target="#seachModal"><i class="fa fa-search"></i><span>البحث عن كتاب </span></a></li>
-          </ul><span class="header_login_actions position-absolute"><a class="btn btn-default navbar-btn login-btn" href="/login"><span class="fa fa-sign-in"></span>&nbsp;&nbsp;دخول</a><a class="btn btn-default navbar-btn  hidden-xs register-btn" href="/register"><span class="fa fa-user"></span>&nbsp;&nbsp;إنشاء حساب</a></span>
+            <li class="nav-item search-li"><a class="search-a  nav-link" href="#" data-toggle="modal" id="loginModalid" data-target="#search_modal"><i class="fa fa-search"></i><span>البحث عن كتاب </span></a></li>
+          </ul>
+          <div class="header_login_actions position-absolute"><a class="btn btn-default navbar-btn login-btn uncolred_btn" href="/login"><span class="fa fa-sign-in"></span>&nbsp;&nbsp;دخول</a><a class="btn btn-default navbar-btn  hidden-xs register-btn colored_btn" href="/register"><span class="fa fa-user"></span>&nbsp;&nbsp;إنشاء حساب</a></div>
         </div>
       </div>
     </nav>
     <div class="page homepage">
-      <div class="header_big_search"> big search</div>
+      <div class="header_big_search">
+        <div class="search_container">
+          <div class="modal fade login-modal" id="search_modal" role="dialog">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <form action="/" method="get">
+                  <div class="modal-header">
+                    <h5 class="modal-title line_buttom">البحث عن كتاب</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <input class="form-control input-lg search_in_site" type="text" autofocus="" data-modalfocus="" style="height: 55px;" placeholder="ابحث عن كتاب او مؤلف او قسم كتب" name="search_in_site" id="search_in_site" required="" autocomplete="off"/>
+                          <ul class="typeahead dropdown-menu" role="listbox" style="top: 55px; left: 15px; display: none;">
+                            <li class="active"><a class="dropdown-item" href="#" role="option">الإدارة والتسيير</a></li>
+                            <li><a class="dropdown-item" href="#" role="option">موسوعة تنمية و تطوير و تسيير اداري و بيداغوجي و تربوي</a></li>
+                            <li><a class="dropdown-item" href="#" role="option">تسيير الموارد البشرية</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button class="btn btn-default btn-lg btn-block colored_btn" type="submit"><i class="fa fa-search"></i>بــحـــث</button><a class="uncolred_btn upload_book_btn" href="/upload"><i class="fa fa-upload"> </i>نشر كتاب</a>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="content-area container">
         <div class="row">
           <div class="col-md-9">
-            <h1>عالم الكتب _ تحميل كتب pdf</h1>
+            <div class="row books_section">
+              <div class="col-lg-3 col-md-4 col-sm-4 col-6">
+                <div class="book_component">
+                  <div class="book_rating"><span class="user_rating_count">
+                      <div class="stars_rating">
+                        <div class="empty_stars"></div>
+                        <div class="full_stars" style="width: 83.206%;right: 0;"></div>
+                      </div></span><span class="rating_stars">(230)</span></div><a class="book_poster" href="#" title="book_title">
+                    <div class="image_book_container" style="background: rgba(45, 52, 54,0.4)"><img src="https://via.placeholder.com/130x180" alt="book_name"/></div></a><a class="book_title" href="#" title="book_title">
+                    <h3>نظرية الفستق</h3></a><a class="book_author" href="#" title="book_author">
+                    <p>فهد عامر الأحمدي</p></a>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-4 col-6">
+                <div class="book_component">
+                  <div class="book_rating"><span class="user_rating_count">
+                      <div class="stars_rating">
+                        <div class="empty_stars"></div>
+                        <div class="full_stars" style="width: 83.206%;right: 0;"></div>
+                      </div></span><span class="rating_stars">(230)</span></div><a class="book_poster" href="#" title="book_title">
+                    <div class="image_book_container" style="background: rgba(45, 52, 54,0.4)"><img src="https://via.placeholder.com/130x180" alt="book_name"/></div></a><a class="book_title" href="#" title="book_title">
+                    <h3>نظرية الفستق</h3></a><a class="book_author" href="#" title="book_author">
+                    <p>فهد عامر الأحمدي</p></a>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-4 col-6">
+                <div class="book_component">
+                  <div class="book_rating"><span class="user_rating_count">
+                      <div class="stars_rating">
+                        <div class="empty_stars"></div>
+                        <div class="full_stars" style="width: 83.206%;right: 0;"></div>
+                      </div></span><span class="rating_stars">(230)</span></div><a class="book_poster" href="#" title="book_title">
+                    <div class="image_book_container" style="background: rgba(45, 52, 54,0.4)"><img src="https://via.placeholder.com/130x180" alt="book_name"/></div></a><a class="book_title" href="#" title="book_title">
+                    <h3>نظرية الفستق</h3></a><a class="book_author" href="#" title="book_author">
+                    <p>فهد عامر الأحمدي</p></a>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-4 col-6">
+                <div class="book_component">
+                  <div class="book_rating"><span class="user_rating_count">
+                      <div class="stars_rating">
+                        <div class="empty_stars"></div>
+                        <div class="full_stars" style="width: 83.206%;right: 0;"></div>
+                      </div></span><span class="rating_stars">(230)</span></div><a class="book_poster" href="#" title="book_title">
+                    <div class="image_book_container" style="background: rgba(45, 52, 54,0.4)"><img src="https://via.placeholder.com/130x180" alt="book_name"/></div></a><a class="book_title" href="#" title="book_title">
+                    <h3>نظرية الفستق</h3></a><a class="book_author" href="#" title="book_author">
+                    <p>فهد عامر الأحمدي</p></a>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-4 col-6">
+                <div class="book_component">
+                  <div class="book_rating"><span class="user_rating_count">
+                      <div class="stars_rating">
+                        <div class="empty_stars"></div>
+                        <div class="full_stars" style="width: 83.206%;right: 0;"></div>
+                      </div></span><span class="rating_stars">(230)</span></div><a class="book_poster" href="#" title="book_title">
+                    <div class="image_book_container" style="background: rgba(45, 52, 54,0.4)"><img src="https://via.placeholder.com/130x180" alt="book_name"/></div></a><a class="book_title" href="#" title="book_title">
+                    <h3>نظرية الفستق</h3></a><a class="book_author" href="#" title="book_author">
+                    <p>فهد عامر الأحمدي</p></a>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-4 col-6">
+                <div class="book_component">
+                  <div class="book_rating"><span class="user_rating_count">
+                      <div class="stars_rating">
+                        <div class="empty_stars"></div>
+                        <div class="full_stars" style="width: 83.206%;right: 0;"></div>
+                      </div></span><span class="rating_stars">(230)</span></div><a class="book_poster" href="#" title="book_title">
+                    <div class="image_book_container" style="background: rgba(45, 52, 54,0.4)"><img src="https://via.placeholder.com/130x180" alt="book_name"/></div></a><a class="book_title" href="#" title="book_title">
+                    <h3>نظرية الفستق</h3></a><a class="book_author" href="#" title="book_author">
+                    <p>فهد عامر الأحمدي</p></a>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-4 col-6">
+                <div class="book_component">
+                  <div class="book_rating"><span class="user_rating_count">
+                      <div class="stars_rating">
+                        <div class="empty_stars"></div>
+                        <div class="full_stars" style="width: 83.206%;right: 0;"></div>
+                      </div></span><span class="rating_stars">(230)</span></div><a class="book_poster" href="#" title="book_title">
+                    <div class="image_book_container" style="background: rgba(45, 52, 54,0.4)"><img src="https://via.placeholder.com/130x180" alt="book_name"/></div></a><a class="book_title" href="#" title="book_title">
+                    <h3>نظرية الفستق</h3></a><a class="book_author" href="#" title="book_author">
+                    <p>فهد عامر الأحمدي</p></a>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-4 col-6">
+                <div class="book_component">
+                  <div class="book_rating"><span class="user_rating_count">
+                      <div class="stars_rating">
+                        <div class="empty_stars"></div>
+                        <div class="full_stars" style="width: 83.206%;right: 0;"></div>
+                      </div></span><span class="rating_stars">(230)</span></div><a class="book_poster" href="#" title="book_title">
+                    <div class="image_book_container" style="background: rgba(45, 52, 54,0.4)"><img src="https://via.placeholder.com/130x180" alt="book_name"/></div></a><a class="book_title" href="#" title="book_title">
+                    <h3>نظرية الفستق</h3></a><a class="book_author" href="#" title="book_author">
+                    <p>فهد عامر الأحمدي</p></a>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-4 col-6">
+                <div class="book_component">
+                  <div class="book_rating"><span class="user_rating_count">
+                      <div class="stars_rating">
+                        <div class="empty_stars"></div>
+                        <div class="full_stars" style="width: 83.206%;right: 0;"></div>
+                      </div></span><span class="rating_stars">(230)</span></div><a class="book_poster" href="#" title="book_title">
+                    <div class="image_book_container" style="background: rgba(45, 52, 54,0.4)"><img src="https://via.placeholder.com/130x180" alt="book_name"/></div></a><a class="book_title" href="#" title="book_title">
+                    <h3>نظرية الفستق</h3></a><a class="book_author" href="#" title="book_author">
+                    <p>فهد عامر الأحمدي</p></a>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-4 col-6">
+                <div class="book_component">
+                  <div class="book_rating"><span class="user_rating_count">
+                      <div class="stars_rating">
+                        <div class="empty_stars"></div>
+                        <div class="full_stars" style="width: 83.206%;right: 0;"></div>
+                      </div></span><span class="rating_stars">(230)</span></div><a class="book_poster" href="#" title="book_title">
+                    <div class="image_book_container" style="background: rgba(45, 52, 54,0.4)"><img src="https://via.placeholder.com/130x180" alt="book_name"/></div></a><a class="book_title" href="#" title="book_title">
+                    <h3>نظرية الفستق</h3></a><a class="book_author" href="#" title="book_author">
+                    <p>فهد عامر الأحمدي</p></a>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-4 col-6">
+                <div class="book_component">
+                  <div class="book_rating"><span class="user_rating_count">
+                      <div class="stars_rating">
+                        <div class="empty_stars"></div>
+                        <div class="full_stars" style="width: 83.206%;right: 0;"></div>
+                      </div></span><span class="rating_stars">(230)</span></div><a class="book_poster" href="#" title="book_title">
+                    <div class="image_book_container" style="background: rgba(45, 52, 54,0.4)"><img src="https://via.placeholder.com/130x180" alt="book_name"/></div></a><a class="book_title" href="#" title="book_title">
+                    <h3>نظرية الفستق</h3></a><a class="book_author" href="#" title="book_author">
+                    <p>فهد عامر الأحمدي</p></a>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-4 col-6">
+                <div class="book_component">
+                  <div class="book_rating"><span class="user_rating_count">
+                      <div class="stars_rating">
+                        <div class="empty_stars"></div>
+                        <div class="full_stars" style="width: 83.206%;right: 0;"></div>
+                      </div></span><span class="rating_stars">(230)</span></div><a class="book_poster" href="#" title="book_title">
+                    <div class="image_book_container" style="background: rgba(45, 52, 54,0.4)"><img src="https://via.placeholder.com/130x180" alt="book_name"/></div></a><a class="book_title" href="#" title="book_title">
+                    <h3>نظرية الفستق</h3></a><a class="book_author" href="#" title="book_author">
+                    <p>فهد عامر الأحمدي</p></a>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-4 col-6">
+                <div class="book_component">
+                  <div class="book_rating"><span class="user_rating_count">
+                      <div class="stars_rating">
+                        <div class="empty_stars"></div>
+                        <div class="full_stars" style="width: 83.206%;right: 0;"></div>
+                      </div></span><span class="rating_stars">(230)</span></div><a class="book_poster" href="#" title="book_title">
+                    <div class="image_book_container" style="background: rgba(45, 52, 54,0.4)"><img src="https://via.placeholder.com/130x180" alt="book_name"/></div></a><a class="book_title" href="#" title="book_title">
+                    <h3>نظرية الفستق</h3></a><a class="book_author" href="#" title="book_author">
+                    <p>فهد عامر الأحمدي</p></a>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-4 col-6">
+                <div class="book_component">
+                  <div class="book_rating"><span class="user_rating_count">
+                      <div class="stars_rating">
+                        <div class="empty_stars"></div>
+                        <div class="full_stars" style="width: 83.206%;right: 0;"></div>
+                      </div></span><span class="rating_stars">(230)</span></div><a class="book_poster" href="#" title="book_title">
+                    <div class="image_book_container" style="background: rgba(45, 52, 54,0.4)"><img src="https://via.placeholder.com/130x180" alt="book_name"/></div></a><a class="book_title" href="#" title="book_title">
+                    <h3>نظرية الفستق</h3></a><a class="book_author" href="#" title="book_author">
+                    <p>فهد عامر الأحمدي</p></a>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-4 col-6">
+                <div class="book_component">
+                  <div class="book_rating"><span class="user_rating_count">
+                      <div class="stars_rating">
+                        <div class="empty_stars"></div>
+                        <div class="full_stars" style="width: 83.206%;right: 0;"></div>
+                      </div></span><span class="rating_stars">(230)</span></div><a class="book_poster" href="#" title="book_title">
+                    <div class="image_book_container" style="background: rgba(45, 52, 54,0.4)"><img src="https://via.placeholder.com/130x180" alt="book_name"/></div></a><a class="book_title" href="#" title="book_title">
+                    <h3>نظرية الفستق</h3></a><a class="book_author" href="#" title="book_author">
+                    <p>فهد عامر الأحمدي</p></a>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-4 col-6">
+                <div class="book_component">
+                  <div class="book_rating"><span class="user_rating_count">
+                      <div class="stars_rating">
+                        <div class="empty_stars"></div>
+                        <div class="full_stars" style="width: 83.206%;right: 0;"></div>
+                      </div></span><span class="rating_stars">(230)</span></div><a class="book_poster" href="#" title="book_title">
+                    <div class="image_book_container" style="background: rgba(45, 52, 54,0.4)"><img src="https://via.placeholder.com/130x180" alt="book_name"/></div></a><a class="book_title" href="#" title="book_title">
+                    <h3>نظرية الفستق</h3></a><a class="book_author" href="#" title="book_author">
+                    <p>فهد عامر الأحمدي</p></a>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-4 col-6">
+                <div class="book_component">
+                  <div class="book_rating"><span class="user_rating_count">
+                      <div class="stars_rating">
+                        <div class="empty_stars"></div>
+                        <div class="full_stars" style="width: 83.206%;right: 0;"></div>
+                      </div></span><span class="rating_stars">(230)</span></div><a class="book_poster" href="#" title="book_title">
+                    <div class="image_book_container" style="background: rgba(45, 52, 54,0.4)"><img src="https://via.placeholder.com/130x180" alt="book_name"/></div></a><a class="book_title" href="#" title="book_title">
+                    <h3>نظرية الفستق</h3></a><a class="book_author" href="#" title="book_author">
+                    <p>فهد عامر الأحمدي</p></a>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-4 col-6">
+                <div class="book_component">
+                  <div class="book_rating"><span class="user_rating_count">
+                      <div class="stars_rating">
+                        <div class="empty_stars"></div>
+                        <div class="full_stars" style="width: 83.206%;right: 0;"></div>
+                      </div></span><span class="rating_stars">(230)</span></div><a class="book_poster" href="#" title="book_title">
+                    <div class="image_book_container" style="background: rgba(45, 52, 54,0.4)"><img src="https://via.placeholder.com/130x180" alt="book_name"/></div></a><a class="book_title" href="#" title="book_title">
+                    <h3>نظرية الفستق</h3></a><a class="book_author" href="#" title="book_author">
+                    <p>فهد عامر الأحمدي</p></a>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-4 col-6">
+                <div class="book_component">
+                  <div class="book_rating"><span class="user_rating_count">
+                      <div class="stars_rating">
+                        <div class="empty_stars"></div>
+                        <div class="full_stars" style="width: 83.206%;right: 0;"></div>
+                      </div></span><span class="rating_stars">(230)</span></div><a class="book_poster" href="#" title="book_title">
+                    <div class="image_book_container" style="background: rgba(45, 52, 54,0.4)"><img src="https://via.placeholder.com/130x180" alt="book_name"/></div></a><a class="book_title" href="#" title="book_title">
+                    <h3>نظرية الفستق</h3></a><a class="book_author" href="#" title="book_author">
+                    <p>فهد عامر الأحمدي</p></a>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-4 col-6">
+                <div class="book_component">
+                  <div class="book_rating"><span class="user_rating_count">
+                      <div class="stars_rating">
+                        <div class="empty_stars"></div>
+                        <div class="full_stars" style="width: 83.206%;right: 0;"></div>
+                      </div></span><span class="rating_stars">(230)</span></div><a class="book_poster" href="#" title="book_title">
+                    <div class="image_book_container" style="background: rgba(45, 52, 54,0.4)"><img src="https://via.placeholder.com/130x180" alt="book_name"/></div></a><a class="book_title" href="#" title="book_title">
+                    <h3>نظرية الفستق</h3></a><a class="book_author" href="#" title="book_author">
+                    <p>فهد عامر الأحمدي</p></a>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="col-md-3">
-            <div class="sidebar">أقسام الكتب</div>
+            <div class="sidebar">
+              <h3 class="sidebar_header"><a class="sidebar_books_categories line_buttom" href="#"> أقسام الكتب</a><span class="pull-left" style="display: inline-block;cursor: pointer;"><span data-toggle="modal" data-target="#search_modal" title="أبحث عن قسم"><i class="fa fa-search"></i></span></span></h3>
+              <div class="sidebar_links"><a href="#"><i class="fa fa-book"></i>الروايات والقصص الأدبية</a><a href="#"><i class="fa fa-book"></i>الروايات والقصص الأدبية</a><a href="#"><i class="fa fa-book"></i>الروايات والقصص الأدبية</a><a href="#"><i class="fa fa-book"></i>الروايات والقصص الأدبية</a><a href="#"><i class="fa fa-book"></i>الروايات والقصص الأدبية</a><a href="#"><i class="fa fa-book"></i>الروايات والقصص الأدبية</a><a href="#"><i class="fa fa-book"></i>الروايات والقصص الأدبية</a><a href="#"><i class="fa fa-book"></i>الروايات والقصص الأدبية</a><a href="#"><i class="fa fa-book"></i>الروايات والقصص الأدبية</a><a href="#"><i class="fa fa-book"></i>الروايات والقصص الأدبية</a><a href="#"><i class="fa fa-book"></i>الروايات والقصص الأدبية</a><a href="#"><i class="fa fa-book"></i>الروايات والقصص الأدبية</a><a href="#"><i class="fa fa-book"></i>الروايات والقصص الأدبية</a><a href="#"><i class="fa fa-book"></i>الروايات والقصص الأدبية</a><a href="#"><i class="fa fa-book"></i>الروايات والقصص الأدبية</a><a href="#"><i class="fa fa-book"></i>الروايات والقصص الأدبية</a><a href="#"><i class="fa fa-book"></i>الروايات والقصص الأدبية</a><a href="#"><i class="fa fa-book"></i>الروايات والقصص الأدبية</a><a href="#"><i class="fa fa-book"></i>الروايات والقصص الأدبية</a><a href="#"><i class="fa fa-book"></i>الروايات والقصص الأدبية</a>
+              </div>
+            </div>
+            <div class="sidebar">
+              <h3 class="sidebar_header"><a class="sidebar_books_categories line_buttom" href="#"> مؤلفون الكتب</a><span class="pull-left" style="display: inline-block;cursor: pointer;"><span data-toggle="modal" data-target="#search_modal" title="أبحث عن قسم"><i class="fa fa-search"></i></span></span></h3>
+              <div class="sidebar_links"><a href="#"><i class="fa fa-book"></i>مصطفى محمود</a><a href="#"><i class="fa fa-book"></i>مصطفى محمود</a><a href="#"><i class="fa fa-book"></i>مصطفى محمود</a><a href="#"><i class="fa fa-book"></i>مصطفى محمود</a><a href="#"><i class="fa fa-book"></i>مصطفى محمود</a><a href="#"><i class="fa fa-book"></i>مصطفى محمود</a><a href="#"><i class="fa fa-book"></i>مصطفى محمود</a><a href="#"><i class="fa fa-book"></i>مصطفى محمود</a><a href="#"><i class="fa fa-book"></i>مصطفى محمود</a><a href="#"><i class="fa fa-book"></i>مصطفى محمود</a><a href="#"><i class="fa fa-book"></i>مصطفى محمود</a><a href="#"><i class="fa fa-book"></i>مصطفى محمود</a><a href="#"><i class="fa fa-book"></i>مصطفى محمود</a><a href="#"><i class="fa fa-book"></i>مصطفى محمود</a><a href="#"><i class="fa fa-book"></i>مصطفى محمود</a><a href="#"><i class="fa fa-book"></i>مصطفى محمود</a><a href="#"><i class="fa fa-book"></i>مصطفى محمود</a><a href="#"><i class="fa fa-book"></i>مصطفى محمود</a><a href="#"><i class="fa fa-book"></i>مصطفى محمود</a><a href="#"><i class="fa fa-book"></i>مصطفى محمود</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>

@@ -51,14 +51,256 @@
 
 html{
     direction: rtl;
-    text-align: right;
-    body{
-        direction: rtl;
-        text-align: right;
-        font-family: Noto Naskh Arabic;
+    text-align: right;  
+}
+body{
 
-        h1, h2, h3, h4, h5, h6, nav {
-            font-family: 'Noto Kufi Arabic','Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+    position: relative;
+    min-height: 100vh;
+    background-color: #f1f1f1;
+    color: #333!important;
+    font-size: 16px;
+    padding: 0!important;
+    margin: 0!important;
+    direction: rtl;
+    text-align: right;
+    font-family: Noto Naskh Arabic;
+}
+.btn, .kufi-b, .kufi-r,.font_Kuf, .similar-books a, body, h1, h2, h3, h4, h5, h6, nav {
+    font-family: 'Noto Kufi Arabic','Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+    line-height: 1.84;
+}
+.form-control{
+  &:focus{
+    box-shadow : none;
+  }
+}
+
+a{
+    color: $mainColor;
+   &:hover{
+       text-decoration: none;
+       color: $altColor;
+   }
+}
+
+.uncolred_btn{
+    color: $mainColor!important;
+    border: 1px solid $mainColor!important;
+    font-size: 15px;
+    background: #fff;
+    &:hover:not(.upload_book_btn){
+        background-color: $mainColor;
+        color: white !important;
+    }
+    &:focus{
+        box-shadow: none;
+    } 
+}
+.colored_btn{
+    color: #fff;
+    border: 1px solid $mainColor;
+    background: $mainColor;
+    box-shadow: none;
+    span{
+        vertical-align: middle;
+    }
+    
+    &:hover,&:active{
+        background: #5fbcad; 
+        color: #fff;
+    }
+} 
+
+i{
+    margin: 0 9px;
+}
+
+.upload_book_btn{
+    float: left;
+    margin: 13px 0;
+    padding: 8px;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.line_buttom{
+    position: relative;
+    &:after{
+        border-bottom: 1px solid $mainColor;
+        bottom: -2px;
+        content: "";
+        display: block;
+        position: absolute;
+        width: 40%;
+        transition: width .3s ease-in-out;
+    }
+    &:hover{
+        &:after{
+            width: 100%;
         }
+    }
+}
+
+
+.content-area.container{
+   margin-top: 30px;
+}
+.empty_stars{
+    &::before{
+        content: "\f005\f005\f005\f005\f005";
+    }
+    font: normal normal normal 14px/1 FontAwesome;
+}
+.full_stars{
+    position: absolute;
+    top: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #ffb400;
+    font: normal normal normal 14px/1 FontAwesome;
+    &::before{
+        content: "\f005\f005\f005\f005\f005"; 
+    }
+}
+
+.stars_rating{
+    position: relative;
+    vertical-align: middle;
+    display: inline-block;
+    color: #888;
+    overflow: hidden;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    top: 2px;
+
+    >div{
+        font-size: inherit;
+    }
+
+}
+
+
+.page_title{
+    display: inline-block;
+    font-size:25px;
+    margin-bottom: 36px;
+    &:after{
+        bottom: -4px;
+    }
+    span{
+        color: $mainColor;
+        font-size: 15px;
+        display: inline-block;
+        margin: 0 4px;
+    }
+}
+
+.breadcrumb li,.breadcrumb a, .checkbox, .form--container, .form-control, .naskh-b, .font_Naskh, .quote-content-child, .tooltip, input, p, select, textarea, ul.typeahead li a {
+    font-family: 'Noto Naskh Arabic','Helvetica Neue',Helvetica,Arial,sans-serif !important;
+    line-height: 1.64 !important;
+}
+
+.pad_30{
+    padding: 30px;
+}
+.pad_0{
+    padding: 0 !important;
+}
+
+.font_s_20 {
+    font-size: 20px!important;
+}
+
+.marg_b_5 {
+    margin-bottom: 5px!important;
+}
+.marg_top_20 {
+    margin-top: 20px!important;
+}
+
+
+
+
+.media {
+    // Proper spacing between instances of .media
+    margin-top: 15px;
+  
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+  
+  .media,
+  .media-body {
+    zoom: 1;
+    overflow: hidden;
+  }
+  
+  .media-body {
+    width: 10000px;
+  }
+  
+  .media-object {
+    display: block;
+  
+    // Fix collapse in webkit from max-width: 100% and display: table-cell.
+    &.img-thumbnail {
+      max-width: none;
+    }
+  }
+  
+  .media-right,
+  .media > .pull-right {
+    padding-left: 10px;
+  }
+  
+  .media-left,
+  .media > .pull-left {
+    padding-right: 10px;
+  }
+  
+  .media-left,
+  .media-right,
+  .media-body {
+    display: table-cell;
+    vertical-align: top;
+  }
+  
+  .media-middle {
+    vertical-align: middle;
+  }
+  
+  .media-bottom {
+    vertical-align: bottom;
+  }
+  
+  // Reset margins on headings for tighter default spacing
+  .media-heading {
+    margin-top: 0;
+    margin-bottom: 5px;
+  }
+  
+  // Media list variation
+  //
+  // Undo default ul/ol styles
+  .media-list {
+    padding-left: 0;
+    list-style: none;
+  }
+  
+
+
+@media (min-width: 1200px){
+    .container {
+        max-width: 1170px;
+    }
+    
+}
+@media (min-width: 576px ) and (max-width:768px) {
+    .container {
+        max-width: 100%;
     }
 }

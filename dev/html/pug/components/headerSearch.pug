@@ -1,1 +1,29 @@
-.header_big_search  big search
+.header_big_search
+    .search_container
+        div(class="modal fade login-modal" id="search_modal" role="dialog")
+            div(class="modal-dialog" role="document")
+                div( class="modal-content")
+                    form(action="/", method="get")
+                        div(class="modal-header")
+                            h5.modal-title.line_buttom البحث عن كتاب
+                            button(type="button" class="close" data-dismiss="modal" aria-label="Close")
+                                span(aria-hidden="true") &times;
+                        .modal-body
+                            .row
+                                .col-md-12
+                                    .form-group
+                                        input(type="text" autofocus="" data-modalfocus="" style="height: 55px;" placeholder="ابحث عن كتاب او مؤلف او قسم كتب" class="form-control input-lg search_in_site" name="search_in_site" id="search_in_site" required="" autocomplete="off")
+                                        ul(class="typeahead dropdown-menu" role="listbox" style="top: 55px; left: 15px; display: none;")
+                                            li.active
+                                                a(class="dropdown-item" href="#" role="option") الإدارة والتسيير
+                                            li
+                                                a(class="dropdown-item" href="#" role="option") موسوعة تنمية و تطوير و تسيير اداري و بيداغوجي و تربوي
+                                            li
+                                                a(class="dropdown-item" href="#" role="option") تسيير الموارد البشرية
+                        .modal-footer
+                            button(type="submit" class="btn btn-default btn-lg btn-block colored_btn")
+                                i.fa.fa-search
+                                | بــحـــث
+                            a(href="/upload" class = "uncolred_btn upload_book_btn")
+                                i.fa.fa-upload 
+                                | نشر كتاب

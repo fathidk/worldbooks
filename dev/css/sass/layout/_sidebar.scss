@@ -1,0 +1,36 @@
+.sidebar{
+    background: #fff;
+    padding: 15px 15px 0 15px;
+    border: 1px solid #dadde1!important;
+    border-radius: 4px;
+    margin-bottom: 25px;
+    h3 {
+        font-size: 20px;
+        a{
+           color: black;
+        }
+        i{
+            margin-left: 0;
+        }
+    }
+    .sidebar_links{
+        margin-top: 25px;
+        i{
+            color: $mainColor;
+            float: left;
+            margin-left: 0;
+            font-size: 18px;
+        } 
+        a{
+            border-bottom: 2px solid #fff;
+            padding-bottom: 0;
+            display: block;
+            color: #333;
+            margin-bottom: 8px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+
+}
